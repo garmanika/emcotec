@@ -40,6 +40,10 @@ a {
   line-height: 32px;
   text-transform: uppercase;
   color: #212121;
+	&.mod{
+		font-size: 18px;
+		line-height: 24px;
+	}
 }
 
 .wrapper-page {
@@ -165,7 +169,12 @@ input[type="number"]::-webkit-outer-spin-button {
   .content {
     margin-top: 48px;
   }
-  
+  .swiper-pagination-bullet{
+		width: 20px;
+	}
+	.swiper-pagination-bullet.swiper-pagination-bullet-active{
+		width: 40px;
+	}
 }
 @media (max-width: 575px) {
   .btn {

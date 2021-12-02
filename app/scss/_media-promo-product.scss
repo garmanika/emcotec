@@ -52,13 +52,13 @@
         font-size: 24px;
         line-height: 32px;
     }
-    .promo-product-inner .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
         padding-right: 0px;
     }
-    .promo-product-inner .swiper-pagination-bullet.swiper-pagination-bullet{
+    .swiper .swiper-pagination-bullet.swiper-pagination-bullet{
         padding-right: 20px;
     }
-    .promo-product-inner .swiper-pagination{
+    .swiper .swiper-pagination{
         bottom: 15px;
         top: auto;
         display: flex;
@@ -67,25 +67,25 @@
         width: 100%;
         gap: 15px;
     }
-    .promo-product-inner .swiper-pagination-bullet::after{
+    .swiper .swiper-pagination-bullet::after{
         width: 20px;
     }
-    .promo-product-inner .swiper-pagination-bullet.swiper-pagination-bullet-active::after{
+    .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active::after{
         width: 40px;
     }
-    .promo-product-inner .swiper-pagination-bullet{
+    .swiper .swiper-pagination-bullet{
         display: inline-block;
         color: transparent;
         padding: 0;
     }
-    .promo-product-inner .swiper-pagination-bullet + .swiper-pagination-bullet{
+    .swiper .swiper-pagination-bullet + .swiper-pagination-bullet{
         margin-top: 0;
         margin-left: 0px;
         &:hover{
             color: transparent;
         }
     }
-    .promo-product-inner .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
         color: transparent;
         &:hover{
             color: transparent;

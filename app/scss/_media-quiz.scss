@@ -42,6 +42,9 @@
 }
 
 @media (max-width: 575px) {
+	.quiz-contol-btns{
+		flex-direction: column;
+	}
     .quiz-contol{
         flex-direction: column;
         .btn{
