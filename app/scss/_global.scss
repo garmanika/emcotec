@@ -160,10 +160,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .content {
     margin-top: 64px;
   }
-  .title{
-    font-size: 24px;
-    line-height: 32px;
-  }
+
 }
 @media (max-width: 767px) {
   .content {
@@ -175,8 +172,13 @@ input[type="number"]::-webkit-outer-spin-button {
 	.swiper-pagination-bullet.swiper-pagination-bullet-active{
 		width: 40px;
 	}
+  .title{
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 @media (max-width: 575px) {
+
   .btn {
     display: block;
     width: 100%;
