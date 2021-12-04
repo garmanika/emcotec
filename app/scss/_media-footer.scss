@@ -1,0 +1,82 @@
+@media (max-width: 1199px) {
+    .footer-connection-box {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .footer-connection-inner {
+        gap: 30px;
+        justify-content: space-between;
+        grid-template-columns: auto 50%;
+    }
+    .footer-bottom-inner{
+        gap: 179px;
+    }
+}
+
+@media (max-width: 991px) {
+    .footer-connection-box-links {
+        .header-top-tel-numbers {
+            display: block;
+        }
+        .header-top-tel-number {
+            padding-left: 38px;
+        }
+        .header-top-tel-number {
+            position: relative;
+            &:first-child::before {
+
+            }
+        }
+    }
+    .footer-connection .header-top-tel-number:first-child::after{
+        position: absolute;
+        content: "";
+        background-image: url(../img/svg/phone-ip-mod.svg);
+        width: 24px;
+        height: 24px;
+        top: 0px;
+        left: 0px;
+    }
+    .footer-bottom-inner{
+        gap: 58px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-connection-inner{
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+    .footer-connection-box{
+        grid-template-columns: 1fr auto;
+        gap: 30px;
+    }
+    .footer-bottom-inner{
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .footer-bottom{
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .footer-bottom-box{
+        grid-template-columns: 1fr;
+    }
+    .footer-connection-box{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .footer-connection-logo{
+        .header-logo-title{
+            display: block;
+        }
+    }
+    .footer-connection .btn.mod-wh{
+        max-width: none;
+    }
+}
+
+@media (min-width: 1200px) {
+}

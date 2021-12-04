@@ -1,0 +1,35 @@
+@media (max-width: 1199px) {
+    .data-clientele-map-inner {
+        height: 528px;
+    }
+    .data-clientele-map-info {
+        max-width: 368px;
+        min-height: 290px;
+    }
+}
+
+@media (max-width: 991px) {
+    .data-clientele-map-info {
+        max-width: 270px;
+        min-height: 368px;
+        top: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .data-clientele-map-inner {
+        height: 320px;
+    }
+}
+
+@media (max-width: 575px) {
+    .data-clientele-map-inner {
+        height: 480px;
+    }
+    .data-clientele-map-info {
+        max-width: 320px;
+    }
+}
+
+@media (min-width: 1200px) {
+}

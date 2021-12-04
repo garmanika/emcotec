@@ -49,11 +49,11 @@ $(function () {
     $(".header-input-search").slideToggle();
   });
 
-  //   $(".masked-phone").inputmask({
-  // 	mask: "+7 (999) 999-99-99",
-  // 	clearIncomplete: true,
-  // 	showMaskOnHover: false,
-  //   });
+  $(".masked-phone").inputmask({
+    mask: "+7 (999) 999-99-99",
+    clearIncomplete: true,
+    showMaskOnHover: false,
+  });
   $(window).on("scroll", function () {
     var height = $(document).scrollTop().valueOf();
 
@@ -120,9 +120,9 @@ $(function () {
       pagination: {
         el: ".danger-items-container .swiper-pagination",
         clickable: true,
-				renderBullet: function (index, className) {
-					return '<span class="' + className + '">' + 0 + (index + 1) + "</span>";
-				},
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + 0 + (index + 1) + "</span>";
+        },
       },
     });
   };
@@ -138,4 +138,23 @@ $(function () {
   breakpointChecker();
 
   //
+  $(".up").click(function (event) {
+    event.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 500) {
+      $(".up").fadeIn();
+    } else {
+      $(".up").fadeOut();
+    }
+  });
+  $('.file-upload').change(function() {
+    var filepath = this.value;
+    var m = filepath.match(/([^\/\\]+)$/);
+    var filename = m[1];
+    $(this).closest('.file-upload-wrapper').find('.filename').html(filename);
+    
+});
 });

@@ -40,12 +40,90 @@ a {
   line-height: 32px;
   text-transform: uppercase;
   color: #212121;
-	&.mod{
-		font-size: 18px;
-		line-height: 24px;
-	}
+  &.mod {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
-
+.web-form-input {
+  padding: 0 14px 9px 14px;
+  border: none;
+  border-bottom: 1px solid #dddddd;
+  display: block;
+  width: 100%;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  &::placeholder {
+    color: #818491;
+  }
+}
+.modal-title-inpust {
+  display: grid;
+  gap: 30px;
+  textarea {
+    border: none;
+    resize: none;
+    padding: 0 14px;
+    border-bottom: 1px solid #dddddd;
+    min-height: 79px;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    &::placeholder {
+      color: #818491;
+    }
+  }
+}
+.file-upload-wrapper {
+  position: relative;
+  padding: 6px 8px;
+  outline: none;
+  box-shadow: none;
+  color: #333333;
+  font-size: 13px;
+  border-radius: 4px;
+  border-bottom: 1px solid #dddddd;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 290px;
+  height: 33px;
+  .icon {
+    display: block;
+  }
+}
+.file-upload-wrapper .filename {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 240px;
+  height: 100%;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #818491;
+}
+.file-upload-wrapper label {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.file-upload-wrapper .file-upload {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
 .wrapper-page {
   display: flex;
   flex-direction: column;
@@ -114,15 +192,34 @@ input[type="number"]::-webkit-outer-spin-button {
   text-transform: uppercase;
   color: #ffffff;
   padding: 12px 30px;
+  text-align: center;
   &:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #0e0e9c;
   }
+  &.mod-wh {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    &:hover {
+      background: #ffffff;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: #333333;
+    }
+  }
 }
-.web-check{
-  label{
+.web-check {
+  label {
     display: grid;
     grid-template-columns: 20px 1fr;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     align-items: start;
 
     cursor: pointer;
@@ -133,7 +230,7 @@ input[type="number"]::-webkit-outer-spin-button {
     position: relative;
     gap: 15px;
   }
-  .check-box{
+  .check-box {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -142,43 +239,59 @@ input[type="number"]::-webkit-outer-spin-button {
     overflow: hidden;
     clip: rect(0 0 0 0);
   }
-  .check-style{
-    border: 1px solid #E0E0E0;
+  .check-style {
+    border: 1px solid #e0e0e0;
     width: 20px;
     height: 20px;
     border-radius: 2px;
-
   }
   .check-box:checked + .check-style {
     background-image: url(../img/svg/check.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+  }
 }
+.up {
+  background: #ffffff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 12px;
+  background: #fff;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 3;
+  &:hover {
+    svg path {
+      fill: #0e0e9c;
+    }
+  }
 }
 @media (max-width: 991px) {
   .content {
     margin-top: 64px;
   }
-
 }
 @media (max-width: 767px) {
   .content {
     margin-top: 48px;
   }
-  .swiper-pagination-bullet{
-		width: 20px;
-	}
-	.swiper-pagination-bullet.swiper-pagination-bullet-active{
-		width: 40px;
-	}
-  .title{
+  .swiper-pagination-bullet {
+    width: 20px;
+  }
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 40px;
+  }
+  .title {
     font-size: 24px;
     line-height: 32px;
   }
 }
 @media (max-width: 575px) {
-
   .btn {
     display: block;
     width: 100%;

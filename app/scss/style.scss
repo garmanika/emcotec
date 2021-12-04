@@ -1115,34 +1115,189 @@ button.header-top-tel-btn-search {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  .title{
+  .title {
     margin-bottom: 8px;
   }
-  .about-short-titles-link{
+  .about-short-titles-link {
     margin-bottom: 24px;
   }
-  .btn{
+  .btn {
     margin-top: 25px;
     text-align: center;
+    padding: 12px 15px;
   }
 }
-.data-clientele-map-info-desc{
+.data-clientele-map-info-desc {
   font-weight: 300;
-font-size: 16px;
-line-height: 24px;
-color: #333333;
-font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
 }
-.data-clientele-map-inner{
+.data-clientele-map-inner {
   height: 540px;
-  img{
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
+@import "_media-data-clientele.scss";
+//
 
 //
+.footer-connection {
+  padding: 65px 0;
+  background: #0d0d48;
+  .btn.mod-wh {
+    max-width: 245px;
+    width: 100%;
+  }
+  .header-logo-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .header-top-tel-number {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .header-top-tel-number:first-child::before {
+    background-image: url(../img/svg/phone-ip-mod.svg);
+  }
+}
+.web-page-link {
+  display: flex;
+  gap: 14px;
+  align-items: start;
+}
+.web-page-link {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  &.mod {
+    &:hover {
+      span {
+        border-color: transparent;
+      }
+    }
+    span {
+      border-bottom: 1px dashed #fff;
+    }
+  }
+}
+.footer-connection-box-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-connection-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  align-items: start;
+  gap: 142px;
+}
+.footer-connection-box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: start;
+  gap: 145px;
+}
+.footer-bottom {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #0d0d48;
+  padding: 12px 0;
+}
+.footer-bottom-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 250px;
+}
+.footer-bottom-box {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+.footer-bottom-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Roboto", sans-serif;
+  color: #818491;
+}
+@import "_media-footer.scss";
+//
+
+//modal
+.fancybox-bg {
+  background: linear-gradient(0deg, rgba(14, 14, 156, 0.2), rgba(14, 14, 156, 0.2)), rgba($color: #000000, $alpha: 0.6);
+}
+.modal {
+  max-width: 410px;
+  padding: 56px 60px;
+  background: #ffffff;
+  box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  min-height: 170px;
+  .modal-title-inpust {
+    margin: 28px 0 40px;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .web-check a {
+    display: contents;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #0e0e9c;
+  }
+  
+  .fancybox-button{
+    opacity: 1;
+    width: 70px;
+    height: 70px;
+    svg{
+      width: 24px;
+      height: 24px;
+      path{
+        fill:#818491;
+      }
+    }
+    &:hover{
+      path{
+        fill:#0E0E9C;;
+      }
+    }
+  }
+}
+.modal-titles-box {
+  text-align: center;
+}
+.modal-title-descr {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #212121;
+  font-weight: 400;
+}
+
+@import "_media-modal.scss";
 .info-text {
   p {
     font-family: "Roboto", sans-serif;
