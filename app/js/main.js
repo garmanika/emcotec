@@ -8,7 +8,7 @@ $(function () {
       $("body").addClass("no-scroll-mobile");
       $(".header-top").addClass("shadow");
       $(".header-input-search").slideUp();
-      $(".header-top-tel-btn-search").toggleClass("open-search");
+      $(".header-top-tel-btn-search").removeClass("open-search");
     } else {
       $(this).removeClass("active");
       mobileNav.removeClass("active");
@@ -46,7 +46,7 @@ $(function () {
       $("body").removeClass("no-scroll-mobile");
     }
     $(this).toggleClass("open-search");
-    $(".header-input-search").slideToggle();
+    $(".header-input-search").fadeToggle();
   });
 
   $(".masked-phone").inputmask({

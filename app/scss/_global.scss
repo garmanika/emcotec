@@ -163,7 +163,10 @@ li {
   flex: 0 0 auto;
 }
 .page-inner {
-  padding-bottom: 80px;
+  padding-bottom: 100px;
+  &.mod{
+    padding-bottom: 95px;
+  }
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -275,8 +278,20 @@ input[type="number"]::-webkit-outer-spin-button {
   .content {
     margin-top: 64px;
   }
+  .page-inner {
+    padding-bottom: 70px;
+    &.mod{
+      padding-bottom: 65px;
+    }
+  }
 }
 @media (max-width: 767px) {
+  .page-inner {
+    padding-bottom: 60px;
+    &.mod{
+      padding-bottom: 55px;
+    }
+  }
   .content {
     margin-top: 48px;
   }
