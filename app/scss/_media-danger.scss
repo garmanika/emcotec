@@ -23,12 +23,18 @@
       bottom: 0;
     }
   }
+  .danger{
+    .swiper .swiper-pagination{
+      bottom: 0;
+    }
+  }
 }
 
 @media (max-width: 575px) {
 }
 
 @media (min-width: 768px) {
+  
   .danger .title {
     margin-bottom: 40px;
   }
@@ -62,7 +68,7 @@
     grid-row: 4/4;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .danger-items {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 188px);

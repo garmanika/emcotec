@@ -1,4 +1,7 @@
 @media (max-width: 1199px) {
+    .promo-product{
+        background-image: url(../img/slide-bg-960.png);
+    }
     .promo-product-img img{
         width: 288px;
         height: 288px;
@@ -16,6 +19,9 @@
 }
 
 @media (max-width: 991px) {
+    .promo-product{
+        background-image: url(../img/slide-bg-768.png);
+    }
     .promo-product-short{
         padding: 30px 0 26px;
     }
@@ -29,6 +35,15 @@
 }
 
 @media (max-width: 767px) {
+    .promo-product-img{
+        margin-right: 0;
+    }
+    .swiper-pagination-bullet{
+        transition: 0.25s;
+    }
+    .promo-product{
+        background-image: url(../img/slide-bg-560.png);
+    }
     .promo-product-short{
         padding: 56px 0;
     }
@@ -42,8 +57,8 @@
         display: none;
     }
     .promo-product-img img{
-        width: 252px;
-        height: 252px;
+        width: 220px;
+        height: 220px;
     }
     .promo-product-inner{
         min-height: 272px;
@@ -54,9 +69,6 @@
     }
     .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
         padding-right: 0px;
-    }
-    .swiper .swiper-pagination-bullet.swiper-pagination-bullet{
-        padding-right: 20px;
     }
     .swiper .swiper-pagination{
         bottom: 15px;
@@ -95,12 +107,35 @@
         grid-template-columns: repeat(2,1fr);
         gap: 30px 62px;
     }
+    .swiper-pagination-bullet{
+        width: 20px;
+    }
+    .swiper-pagination-bullet::after{
+        right: 0;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active::after{
+        right: 0;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active::after, .swiper-pagination-bullet::after{
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%,50%);
+    }
+    .promo-product .swiper-slide{
+        padding-bottom: 56px;
+    }
 }
 
 @media (max-width: 575px) {
+    .promo-product{
+        background-image: url(../img/slide-bg-320.png);
+    }
+    .promo-product-short-item-title{
+        text-transform: none;
+    }
     .promo-product-short-inner{
         grid-template-columns: repeat(2,1fr);
-        gap: 30px ;
+        gap: 20px ;
     }
     .promo-product-short-item-title{
         font-size: 14px;

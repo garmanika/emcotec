@@ -1,15 +1,15 @@
 @media (max-width: 1199px) {
-    .data-clientele-map-inner {
+    .clients-map-inner {
         height: 528px;
     }
-    .data-clientele-map-info {
-        max-width: 368px;
-        min-height: 290px;
+    .clients-map-info {
+        max-width: 290px;
+        min-height: 368px;
     }
 }
 
 @media (max-width: 991px) {
-    .data-clientele-map-info {
+    .clients-map-info {
         max-width: 270px;
         min-height: 368px;
         top: 15px;
@@ -17,17 +17,19 @@
 }
 
 @media (max-width: 767px) {
-    .data-clientele-map-inner {
+    .clients-map-inner {
         height: 320px;
+    }
+    .clients-map-info{
+        position: static;
+        max-width: 100%;
+        margin: 0px 0 30px;
     }
 }
 
 @media (max-width: 575px) {
-    .data-clientele-map-inner {
+    .clients-map-inner {
         height: 480px;
-    }
-    .data-clientele-map-info {
-        max-width: 320px;
     }
 }
 

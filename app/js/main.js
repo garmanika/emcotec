@@ -6,7 +6,6 @@ $(function () {
       $(this).addClass("active");
       mobileNav.addClass("active");
       $("body").addClass("no-scroll-mobile");
-      $(".header-top").addClass("shadow");
       $(".header-input-search").slideUp();
       $(".header-top-tel-btn-search").removeClass("open-search");
     } else {
@@ -59,7 +58,10 @@ $(function () {
 
     if (height >= 160) {
       $("header").addClass("sticky");
-    } else {
+    } else if (window.matchMedia('(max-width: 768px)') && height >= 0) {
+      $("header").addClass("sticky");
+    }
+    else {
       $("header").removeClass("sticky");
     }
   });
@@ -84,32 +86,25 @@ $(function () {
   });
   const breakpoint = window.matchMedia("(min-width: 767px)");
 
-  // keep track of swiper instances to destroy later
+
   let mySwiper;
 
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-
   const breakpointChecker = function () {
-    // if larger viewport and multi-row layout needed
+
     if (breakpoint.matches === true) {
-      // clean up old instances and inline styles when available
+
       if (mySwiper !== undefined) mySwiper.destroy(true, true);
 
-      // or/and do nothing
       return;
 
-      // else if a small viewport and single column layout needed
+
     } else if (breakpoint.matches === false) {
-      // fire small viewport version of swiper
+
       return enableSwiper();
     }
   };
 
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
+
 
   const enableSwiper = function () {
     mySwiper = new Swiper(".danger-items-container", {
@@ -127,14 +122,12 @@ $(function () {
     });
   };
 
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
 
-  // keep an eye on viewport size changes
+
+
   breakpoint.addListener(breakpointChecker);
 
-  // kickstart
+
   breakpointChecker();
 
   //
@@ -150,11 +143,14 @@ $(function () {
       $(".up").fadeOut();
     }
   });
-  $('.file-upload').change(function() {
+  $('.file-upload').change(function () {
     var filepath = this.value;
     var m = filepath.match(/([^\/\\]+)$/);
     var filename = m[1];
     $(this).closest('.file-upload-wrapper').find('.filename').html(filename);
-    
-});
+
+  });
+
+
+
 });

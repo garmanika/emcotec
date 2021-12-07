@@ -23,6 +23,13 @@
     .fancybox-slide--html{
         padding: 15px;
     }
+    .footer-connection-inner{
+        max-width: 50%;
+        .btn.mod-wh{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
 }
 
 @media (min-width: 1200px) {
