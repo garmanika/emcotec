@@ -67,9 +67,7 @@
         font-size: 24px;
         line-height: 32px;
     }
-    .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
-        padding-right: 0px;
-    }
+
     .swiper .swiper-pagination{
         bottom: 15px;
         top: auto;
@@ -81,14 +79,13 @@
     }
     .swiper .swiper-pagination-bullet::after{
         width: 20px;
+				margin: 0;
     }
     .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active::after{
         width: 40px;
     }
     .swiper .swiper-pagination-bullet{
-        display: inline-block;
-        color: transparent;
-        padding: 0;
+display: none;
     }
     .swiper .swiper-pagination-bullet + .swiper-pagination-bullet{
         margin-top: 0;

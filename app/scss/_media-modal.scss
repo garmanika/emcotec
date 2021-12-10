@@ -10,6 +10,10 @@
 }
 
 @media (max-width: 575px) {
+	.fancybox-slide--html .fancybox-close-small{
+		top: 0px;
+		right: 0px;
+	}
     .modal{
         padding-top: 30px;
         padding-bottom: 30px;

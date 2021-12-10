@@ -1,4 +1,5 @@
 @media (max-width: 1199px) {
+
     .about-short{
         padding: 118px 0 80px;
     }
@@ -9,6 +10,9 @@
 }
 
 @media (max-width: 991px) {
+	.about-short-info-img{
+	max-height: 690px;	
+	}
     .about-short-titles{
         margin-bottom: 40px;
     }
@@ -29,6 +33,9 @@
 }
 
 @media (max-width: 767px) {
+	.about-short-info-img{
+		max-height: 383px;	
+		}
     .about-short-titles{
         margin-bottom: 33px;
     }
@@ -44,6 +51,9 @@
 }
 
 @media (max-width: 575px) {
+	.about-short-info-img{
+		max-height: 216px;	
+		}
     .about-short-info-items {
         display: flex;
         justify-content: center;

@@ -1,0 +1,107 @@
+@media (max-width: 1199px) {
+    .page-inner{
+        gap: 55px;
+    }
+    
+        .aside-question .btn{
+            display: inline-block;
+            width: auto;
+        }
+        .aside-question{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+}
+
+@media (max-width: 991px) {
+    .project-detail-used .title{
+        margin: 48px 0 39px;
+    }
+    .project-detail-used-slider-box .catalog-item{
+        padding-bottom: 30px;
+    }
+    .aside-question-info{
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .project-detail-used-slider-box .catalog-item{
+        padding: 20px;
+    }
+    .project-detail-info{
+        margin: 34px 0 40px;
+    }
+    .project-detail-info-items{
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+    .project-detail-info-item-info{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .project-detail-used .title{
+        margin: 25px 0 32px;
+    }
+    .project-detail-slider-info{
+        position: static;
+        margin-top: 15px;
+        background: transparent;
+    }
+    .project-detail-slider-box,
+    .project-detail-used-slider-box{
+        .swiper-pagination{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            gap: 15px;
+            bottom: 0;
+            
+        }
+        .swiper-button-next, .swiper-button-prev{
+            display: none;
+        }
+       .swiper-pagination-bullet{
+        display: block;
+        width: 20px;
+        min-height: auto;
+        min-height: 20px;
+        background: 0 0;
+        transition: .25s;
+        border-radius: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+       }
+       .swiper-pagination-bullet-active{
+           width: 40px;
+       }
+     .swiper-pagination-bullet:after{
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin: 0;
+        background: #818491;
+        -webkit-transition: .25s;
+        -o-transition: .25s;
+        transition: .25s;
+     }
+    .swiper-pagination-bullet-active:after {
+        width: 40px;
+        background: #0e0e9c;
+    }
+    }
+    .project-detail-used-slider{
+        padding-bottom: 40px;
+    }
+    .project-detail-slider {
+        padding-bottom: 33px;
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

@@ -1,4 +1,7 @@
  @media (max-width: 1199px) {
+	 .text-navigation{
+		 display: none;
+	 }
 }
 
 @media (max-width: 991px) {
@@ -8,6 +11,9 @@
     .breadcrumbs{
         margin-bottom: 38px;
     }
+		.breadcrumbs.mod{
+			margin-bottom: 36px;
+		}
 }
 
 @media (max-width: 767px) {
@@ -18,21 +24,23 @@
         font-size: 24px;
         line-height: 32px;
     }
-    .info-text h1{
+    .info-text h2{
         font-size: 24px;
         line-height: 32px;
         margin: 46px 0 26px;
     }
-    .info-text h2{
+    .info-text h3{
         margin: 28px 0 24px;
         font-size: 18px;
         line-height: 24px;
     }
-    .info-text h3{
+    .info-text h4{
         font-size: 16px;
         line-height: 20px;
         margin: 30px 0 16px; 
     }
+    .img-right,
+    .img-left,
     .box-left, .box-right {
         float: none;
         max-width: 100%;
@@ -47,6 +55,12 @@
     .info-text blockquote::before{
         height: 50%;
     }
+		.breadcrumbs.mod{
+			margin-bottom: 26px;
+		}
+        .info-text blockquote h4{
+            line-height: 24px;
+        }
 }
 
 @media (max-width: 575px) {

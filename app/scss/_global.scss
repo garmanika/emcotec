@@ -92,25 +92,33 @@ a {
   border-radius: 4px;
   border-bottom: 1px solid #dddddd;
   background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 290px;
+  width: 100%;
   height: 33px;
   .icon {
     display: block;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 0;
+		right: 0;
   }
 }
 .file-upload-wrapper .filename {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 240px;
+  width: 100%;
   height: 100%;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   color: #818491;
+  font-family: "Roboto", sans-serif;
+	position: absolute;
+	padding-right: 40px;
+	height: 24px;
+	top: 0;
+	left: 14px;
 }
 .file-upload-wrapper label {
   cursor: pointer;
@@ -196,6 +204,7 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #ffffff;
   padding: 12px 30px;
   text-align: center;
+	display: inline-block;
   &:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #0e0e9c;
   }
@@ -247,6 +256,7 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 20px;
     height: 20px;
     border-radius: 2px;
+
   }
   .check-box:checked + .check-style {
     background-image: url(../img/svg/check.svg);
@@ -254,6 +264,22 @@ input[type="number"]::-webkit-outer-spin-button {
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+.modal { 
+.web-check{
+	label{
+		color: #999;
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.check-style{
+		position: relative;
+		top: 8px;
+	}
+	.check-box{
+		top: 8px;
+	}
+}
 }
 .arrow-right{
   border: solid #333333;
