@@ -191,4 +191,58 @@ $(function () {
 			},
 		}
   });
+  const Swiper3 = new Swiper(".catalog-section-photo-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+
+    pagination: {
+      el: ".catalog-section-photo-slider-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".catalog-section-photo-slider .swiper-button-next",
+      prevEl: ".catalog-section-photo-slider .swiper-button-prev",
+    },
+    breakpoints: {
+			320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        slidesPerGroup: 1,
+			},
+			769: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+			},
+		}
+  });
+  const Swiper4 = new Swiper(".catalog-section-example-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+
+    pagination: {
+      el: ".catalog-section-example-slider-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".catalog-section-example-inner .swiper-button-next",
+      prevEl: ".catalog-section-example-inner .swiper-button-prev",
+    },
+    breakpoints: {
+			320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        slidesPerGroup: 1,
+			},
+			769: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+			},
+		}
+  });
 });

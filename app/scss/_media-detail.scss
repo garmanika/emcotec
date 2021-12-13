@@ -1,4 +1,5 @@
 @media (max-width: 1199px) {
+
     .page-inner{
         gap: 55px;
     }
@@ -26,6 +27,9 @@
 }
 
 @media (max-width: 767px) {
+    .project-detail-slider-img{
+        padding-bottom: 75%;
+    }
     .project-detail-used-slider-box .catalog-item{
         padding: 20px;
     }
@@ -47,6 +51,7 @@
         position: static;
         margin-top: 15px;
         background: transparent;
+        padding: 0;
     }
     .project-detail-slider-box,
     .project-detail-used-slider-box{
@@ -97,6 +102,15 @@
     }
     .project-detail-slider {
         padding-bottom: 33px;
+    }
+    .project-detail .about-short-titles-link{
+        margin-top: 20px;
+    }
+    .aside-question .btn{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 0;
     }
 }
 
