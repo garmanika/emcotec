@@ -245,31 +245,24 @@ $(function () {
 			},
 		}
   });
-  const Swiper5 = new Swiper(".useful-detail-used", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-
-    pagination: {
-      el: ".useful-detail-used .project-detail-used-slider-pagination",
-      clickable: true,
-    },
-
-    navigation: {
-      nextEl: ".useful-detail-used  .swiper-button-next",
-      prevEl: ".useful-detail-used  .swiper-button-prev",
-    },
-    breakpoints: {
-			320: {
-        slidesPerView: 1,
+	const Swiper5 = new Swiper(".catalog-detail-product-slider-thumbs", {
         spaceBetween: 15,
-        slidesPerGroup: 1,
-			},
-			769: {
         slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 3,
-			},
-		}
-  });
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      const Swiper6 = new Swiper(".catalog-detail-product-slider", {
+        spaceBetween: 15,
+        navigation: {
+          nextEl: ".catalog-detail-product-slider .swiper-button-next",
+          prevEl: ".catalog-detail-product-slider .swiper-button-prev",
+        },
+				pagination: {
+					el: ".catalog-detail-product-slider-pagination",
+					clickable: true,
+				},
+        thumbs: {
+          swiper: Swiper5,
+        },
+      });
 });
