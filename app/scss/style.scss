@@ -5086,7 +5086,12 @@ button.header-top-tel-btn-search.open-search:hover {
   }
 }
 .catalog-detail-product-slider-thumbs {
-  margin-top: 16px;
+  margin-top: 16px; 
+	.swiper-slide-thumb-active{
+		.catalog-detail-product-slider-thumbs-img img{
+			border: 2px solid #0E0E9C;
+		}
+	}
 }
 .catalog-detail-product-slider-thumbs-img {
   @include container-img;
