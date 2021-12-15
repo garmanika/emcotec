@@ -5594,8 +5594,11 @@ button.header-top-tel-btn-search.open-search:hover {
 .catalog-detail-product-slider-thumbs {
   margin-top: 16px
 }
+.catalog-detail-product-slider-thumbs .swiper-slide .catalog-detail-product-slider-thumbs-img img {
+  border: 2px solid transparent
+}
 .catalog-detail-product-slider-thumbs .swiper-slide-thumb-active .catalog-detail-product-slider-thumbs-img img {
-  border: 2px solid #0e0e9c
+  border-color: #0e0e9c
 }
 .catalog-detail-product-slider-thumbs-img {
   position: relative;
