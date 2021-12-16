@@ -53,14 +53,23 @@ $(function () {
     clearIncomplete: true,
     showMaskOnHover: false,
   });
+  // $(window).on("scroll", function () {
+  //   var height = $(document).scrollTop().valueOf();
+  //   if  (window.matchMedia('(max-width: 991px)').matches && height >= 0 ) {
+  //     $(".header").addClass("sticky");
+  //    }
+	// 	  else if (height >= 160) {
+  //      $(".header").addClass("sticky");
+  //    }
+  //   else {
+  //     $(".header").removeClass("sticky");
+  //   }
+  // });
   $(window).on("scroll", function () {
     var height = $(document).scrollTop().valueOf();
-    if  (window.matchMedia('(max-width: 991px)').matches && height >= 0 ) {
+    if (height >= 160) {
       $(".header").addClass("sticky");
-     }
-		  else if (height >= 160) {
-       $(".header").addClass("sticky");
-     }
+    }
     else {
       $(".header").removeClass("sticky");
     }
@@ -245,31 +254,55 @@ $(function () {
 			},
 		}
   });
-  const Swiper5 = new Swiper(".useful-detail-used", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-
-    pagination: {
-      el: ".useful-detail-used .project-detail-used-slider-pagination",
-      clickable: true,
-    },
-
-    navigation: {
-      nextEl: ".useful-detail-used  .swiper-button-next",
-      prevEl: ".useful-detail-used  .swiper-button-prev",
-    },
-    breakpoints: {
-			320: {
-        slidesPerView: 1,
+	const Swiper5 = new Swiper(".catalog-detail-product-slider-thumbs", {
         spaceBetween: 15,
-        slidesPerGroup: 1,
-			},
-			769: {
         slidesPerView: 3,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      const Swiper6 = new Swiper(".catalog-detail-product-slider", {
+        spaceBetween: 15,
+        navigation: {
+          nextEl: ".catalog-detail-product-slider .swiper-button-next",
+          prevEl: ".catalog-detail-product-slider .swiper-button-prev",
+        },
+				pagination: {
+					el: ".catalog-detail-product-slider-pagination",
+					clickable: true,
+				},
+        thumbs: {
+          swiper: Swiper5,
+        },
+      });
+      const Swiper7 = new Swiper(".clients-slider", {
+        slidesPerView: 2,
         spaceBetween: 30,
-        slidesPerGroup: 3,
-			},
-		}
-  });
+        slidesPerGroup: 2,
+    
+        pagination: {
+          el: ".clients-slider .swiper-pagination",
+          clickable: true,
+        },
+    
+        navigation: {
+          nextEl: ".clients-slider .swiper-button-next",
+          prevEl: ".clients-slider .swiper-button-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            slidesPerGroup: 1,
+          },
+          769: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            slidesPerGroup: 2,
+          },
+        }
+      });
+      $('.answers-item-title').on('click', function(e) {
+        $(this).closest('.answers-item').toggleClass('open');
+        $(this).siblings('.answers-item-info').slideToggle();
+      });
 });

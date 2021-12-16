@@ -2,6 +2,9 @@
     .text-navigation-menu {
         display: none;
     }
+		.text-navigation{
+			margin-top: 48px;
+		}
 }
 
 @media (max-width: 991px) {
@@ -21,6 +24,9 @@
 }
 
 @media (max-width: 767px) {
+	.text-navigation{
+		margin-top: 40px;
+	}
     .img-vw,
     .box-vw{
         margin: 33px 0;

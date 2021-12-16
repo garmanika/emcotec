@@ -1,0 +1,44 @@
+@media (max-width: 1199px) {
+    .clients-feedback{
+    &.modal{
+        min-height: auto;
+        margin-top: 50px;
+    }
+        .modal-title-inpust{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .modal-title-inpust textarea{
+        grid-column: 1/4;
+    }
+    .btn{
+        width: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+}
+
+@media (max-width: 991px) {
+    .page-inner-contacts{
+        padding-bottom: 64px;
+      }
+}
+
+@media (max-width: 767px) {
+    .page-inner-contacts{
+        padding-bottom: 60px;
+      }
+      .clients-map-inner.mod{
+        height: 480px;
+      }
+      .clients-slider{
+          margin-top: 30px;
+      }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}
