@@ -1,0 +1,27 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+    .breadcrumbs.search{
+        margin-bottom: 33px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .breadcrumbs.search{
+        margin-bottom: 25px;
+    }
+    .search-found{
+        margin-top: 40px;
+    }
+    .search-found-item+.search-found-item{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

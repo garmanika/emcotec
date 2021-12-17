@@ -2672,6 +2672,12 @@ button.header-top-tel-btn-search.open-search:hover {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 17px;
+  &:hover,
+  &:focus {
+    .quiz-documents-info-title {
+      color: #3c3cae;
+    }
+  }
 }
 .quiz-documents-info-title {
   font-weight: 300;
@@ -4391,8 +4397,8 @@ button.header-top-tel-btn-search.open-search:hover {
     margin-top: 3px;
   }
 }
-.projects-data-item-box.time{
-  svg{
+.projects-data-item-box.time {
+  svg {
     justify-self: center;
   }
 }
@@ -4960,7 +4966,7 @@ button.header-top-tel-btn-search.open-search:hover {
 .useful-item:hover,
 .useful-item:focus {
   .useful-item-desc {
-    color: #0c0c85;
+    color: #3c3cae;
   }
 }
 @import "_media-useful.scss";
@@ -5120,27 +5126,29 @@ button.header-top-tel-btn-search.open-search:hover {
 .answers-item {
   background: #ffffff;
   border-radius: 5px;
+  padding: 0 0 8px 0;
   .about-short-titles-link {
     justify-content: end;
   }
   .answers-item-title {
-    padding-top: 25px;
-    padding-left: 30px;
-    padding-right: 30px;
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
     color: #333333;
-    padding-bottom: 25px;
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 1fr 32px;
+    gap: 15px;
     position: relative;
-    padding-right: 65px;
+
+    padding: 24px 30px 16px 30px;
     cursor: pointer;
     &::after {
       content: "";
-      position: absolute;
-      right: 30px;
-      top: 20px;
+      display: block;
+      position: static;
       width: 32px;
       height: 32px;
       background-image: url(../img/svg/plus-answer.svg);
@@ -5154,8 +5162,8 @@ button.header-top-tel-btn-search.open-search:hover {
 .answers-item-info {
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 25px;
-  margin-top: -10px;
+  padding-bottom: 16px;
+  margin-top: 0px;
   display: none;
 }
 .answers-item.open {
@@ -5209,11 +5217,13 @@ button.header-top-tel-btn-search.open-search:hover {
   padding-bottom: 141%;
   border-radius: 5px;
   background: #fff;
+  display: block;
   img {
     @include img;
   }
 }
 .scientific-item-info {
+  display: block;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
@@ -5223,6 +5233,12 @@ button.header-top-tel-btn-search.open-search:hover {
 }
 .scientific-item {
   display: block;
+  &:hover,
+  &:focus {
+    .scientific-item-info {
+      color: #3c3cae;
+    }
+  }
 }
 @import "_media-scientific.scss";
 //documents
@@ -5253,8 +5269,14 @@ button.header-top-tel-btn-search.open-search:hover {
   .modal-title-inpust {
     margin: 26px 0 35px;
   }
-  .web-check a{
+  .web-check a {
     text-decoration: underline;
+  }
+  .web-check .check-style {
+    top: 0;
+  }
+  .web-check .check-box {
+    top: 0;
   }
 }
 .clients-title {
@@ -5297,29 +5319,181 @@ button.header-top-tel-btn-search.open-search:hover {
       line-height: 24px;
       color: #333333;
       font-family: "Roboto Condensed", sans-serif;
-      
     }
   }
 }
-.clients-box-img{
-  img{
+.clients-box-img {
+  img {
     margin-top: 3px;
     display: block;
   }
 }
-.clients-slider-img{
+.clients-slider-img {
   @include container-img;
   padding-bottom: 75%;
 
-  img{
+  img {
     @include img;
     border-radius: 5px;
   }
 }
-.clients-slider{
+.clients-slider {
   margin-top: 40px;
 }
-.page-inner-contacts{
+.page-inner-contacts {
   padding-bottom: 118px;
 }
 @import "_media-clients-page.scss";
+
+//search
+.search {
+}
+.search-form-box {
+  position: relative;
+  input {
+    border: none;
+    width: 100%;
+    background: #f7f7fb;
+    border-bottom: 1px solid #dddddd;
+    padding: 8px 15px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    background: transparent;
+    &::placeholder {
+      color: #818491;
+    }
+  }
+  button {
+    @include no-button;
+    position: absolute;
+    right: 15px;
+    bottom: 8px;
+    svg,
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.search-found {
+  margin-top: 50px;
+}
+.search-found-item {
+  & + .search-found-item {
+    margin-top: 50px;
+  }
+}
+.search-found-item-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #212121;
+  margin-bottom: 16px;
+  display: block;
+}
+.search-found-item-info {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  span {
+    color: #36369d;
+    padding: 5px;
+    background: #e6e6fa;
+  }
+}
+.search-found-item-data {
+  margin-top: 15px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #818491;
+  display: block;
+}
+.breadcrumbs.search {
+  margin-bottom: 50px;
+}
+@import "_media-search.scss";
+//void
+.void-inner {
+  min-height: 690px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .about-short-titles-link{
+    margin-top: 48px;
+  }
+}
+.void-title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #212121;
+  margin: 0;
+}
+.void-descr {
+  margin: 0;
+  margin-top: 16px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+}
+.void-info {
+  margin-top: 48px;
+  span {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    font-family: "Roboto", sans-serif;
+    display: block;
+    max-width: 530px;
+    & + span {
+      margin-top: 8px;
+    }
+    a {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      color: #0c0c85;
+      font-family: "Roboto", sans-serif;
+      text-decoration: underline;
+    }
+  }
+}
+.void-feedback {
+  margin-top: 48px;
+  span {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Roboto", sans-serif;
+    color: #333333;
+  }
+  a {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+  }
+  .btn{
+    margin-top: 25px;
+  }
+}
+@import "_media-void.scss";
