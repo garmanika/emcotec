@@ -1,4 +1,19 @@
 @media (max-width: 1199px) {
+    .tags-all.show {
+        display: block;
+    }
+    .filled .tags-all-hide {
+        display: initial;
+    }
+    .filled .tags-all-show {
+        display: none;
+    }
+    .tags-all-hide {
+        display: none;
+    }
+.filled .tags-all-show {
+    display: none;
+}
     .aside-question.mod {
         margin-top: 15px;
     }
@@ -9,14 +24,28 @@
         }
     }
     .tags-all {
-        display: block;
         margin-top: 16px;
         font-weight: bold;
         font-size: 15px;
         line-height: 24px;
         text-transform: uppercase;
         color: #818491;
+        &.open{
+            display: block;
+        }
     }
+    .tags-items-inner {
+        max-height: 88px;
+        overflow: hidden;
+      }
+      .tags.fillid{
+
+      }
+      .tags.filled{
+        .tags-items-inner{
+            max-height: none;
+        }
+      }
 }
 
 @media (max-width: 991px) {

@@ -58,7 +58,7 @@ $(function () {
   //   if  (window.matchMedia('(max-width: 991px)').matches && height >= 0 ) {
   //     $(".header").addClass("sticky");
   //    }
-	// 	  else if (height >= 160) {
+  // 	  else if (height >= 160) {
   //      $(".header").addClass("sticky");
   //    }
   //   else {
@@ -188,17 +188,17 @@ $(function () {
       prevEl: ".project-detail-used-slider .swiper-button-prev",
     },
     breakpoints: {
-			320: {
+      320: {
         slidesPerView: 1,
         spaceBetween: 15,
         slidesPerGroup: 1,
-			},
-			769: {
+      },
+      769: {
         slidesPerView: 3,
         spaceBetween: 30,
         slidesPerGroup: 3,
-			},
-		}
+      },
+    }
   });
   const Swiper3 = new Swiper(".catalog-section-photo-slider", {
     slidesPerView: 3,
@@ -215,17 +215,17 @@ $(function () {
       prevEl: ".catalog-section-photo-slider .swiper-button-prev",
     },
     breakpoints: {
-			320: {
+      320: {
         slidesPerView: 1,
         spaceBetween: 15,
         slidesPerGroup: 1,
-			},
-			769: {
+      },
+      769: {
         slidesPerView: 3,
         spaceBetween: 30,
         slidesPerGroup: 3,
-			},
-		}
+      },
+    }
   });
   const Swiper4 = new Swiper(".catalog-section-example-slider", {
     slidesPerView: 3,
@@ -242,67 +242,96 @@ $(function () {
       prevEl: ".catalog-section-example-inner .swiper-button-prev",
     },
     breakpoints: {
-			320: {
+      320: {
         slidesPerView: 1,
         spaceBetween: 15,
         slidesPerGroup: 1,
-			},
-			769: {
+      },
+      769: {
         slidesPerView: 2,
         spaceBetween: 30,
         slidesPerGroup: 1,
-			},
-		}
+      },
+    }
   });
-	const Swiper5 = new Swiper(".catalog-detail-product-slider-thumbs", {
+  const Swiper5 = new Swiper(".catalog-detail-product-slider-thumbs", {
+    spaceBetween: 15,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  const Swiper6 = new Swiper(".catalog-detail-product-slider", {
+    spaceBetween: 15,
+    navigation: {
+      nextEl: ".catalog-detail-product-slider .swiper-button-next",
+      prevEl: ".catalog-detail-product-slider .swiper-button-prev",
+    },
+    pagination: {
+      el: ".catalog-detail-product-slider-pagination",
+      clickable: true,
+    },
+    thumbs: {
+      swiper: Swiper5,
+    },
+  });
+  const Swiper7 = new Swiper(".clients-slider", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    slidesPerGroup: 2,
+
+    pagination: {
+      el: ".clients-slider .swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".clients-slider .swiper-button-next",
+      prevEl: ".clients-slider .swiper-button-prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
         spaceBetween: 15,
-        slidesPerView: 3,
-        freeMode: true,
-        watchSlidesProgress: true,
-      });
-      const Swiper6 = new Swiper(".catalog-detail-product-slider", {
-        spaceBetween: 15,
-        navigation: {
-          nextEl: ".catalog-detail-product-slider .swiper-button-next",
-          prevEl: ".catalog-detail-product-slider .swiper-button-prev",
-        },
-				pagination: {
-					el: ".catalog-detail-product-slider-pagination",
-					clickable: true,
-				},
-        thumbs: {
-          swiper: Swiper5,
-        },
-      });
-      const Swiper7 = new Swiper(".clients-slider", {
+        slidesPerGroup: 1,
+      },
+      769: {
         slidesPerView: 2,
         spaceBetween: 30,
         slidesPerGroup: 2,
-    
-        pagination: {
-          el: ".clients-slider .swiper-pagination",
-          clickable: true,
-        },
-    
-        navigation: {
-          nextEl: ".clients-slider .swiper-button-next",
-          prevEl: ".clients-slider .swiper-button-prev",
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 15,
-            slidesPerGroup: 1,
-          },
-          769: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-            slidesPerGroup: 2,
-          },
-        }
-      });
-      $('.answers-item-title').on('click', function(e) {
-        $(this).closest('.answers-item').toggleClass('open');
-        $(this).siblings('.answers-item-info').slideToggle();
-      });
+      },
+    }
+  });
+  $('.answers-item-title').on('click', function (e) {
+    $(this).closest('.answers-item').toggleClass('open');
+    $(this).siblings('.answers-item-info').slideToggle();
+  });
+
+	$(".tags-all").on('click', function () {
+		$(".tags").toggleClass('filled');
+	});
+
+	checkTagsHeight();
+	$(window).resize(checkTagsHeight);
+
+
+
+
+
+
+
 });
+
+
+function checkTagsHeight() {
+	let wasOpend = $(".tags").hasClass('filled');
+	$(".tags").removeClass('filled');
+	let showAllButton = $('.tags-items').height() > $('.tags-items-inner').height();
+	if (window.matchMedia('(max-width: 1199px)').matches && showAllButton) {
+		if (wasOpend) {
+			$(".tags").addClass('filled');
+		}
+		$('.tags-all').addClass('show');
+	} else {
+		$('.tags-all').removeClass('show');
+	}
+}
