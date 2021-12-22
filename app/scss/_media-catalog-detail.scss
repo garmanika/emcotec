@@ -85,6 +85,12 @@
 			padding-bottom: 50px;
 		}
 	}
+  #characteristic{
+    padding-top: 50px;
+    margin-top: -50px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+  }
 }
 
 @media (max-width: 575px) {

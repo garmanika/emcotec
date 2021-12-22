@@ -1,0 +1,40 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+    .scientific-box.mod .title{
+        margin: 50px 0 39px;
+    }
+    .scientific-box .title{
+        margin: 64px 0 39px;
+    }
+    .scientific-box .info-text{
+        margin: 34px 0 41px;
+    }
+}
+
+@media (max-width: 767px) {
+    .scientific-box.mod .title{
+        margin: 47px 0 32px;
+    }
+    .scientific-box .title{
+        margin: 40px 0 32px;
+    }
+    .scientific-items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .scientific-box .info-text{
+        margin: 27px 0 33px;
+    }
+    .scientific-item-info{
+        margin-top: 16px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

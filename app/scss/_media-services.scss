@@ -1,0 +1,22 @@
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+    .services-items{
+        margin-top: 41px;
+    }
+}
+
+@media (max-width: 767px) {
+    .services-items{
+        margin-top: 33px;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}

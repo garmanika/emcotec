@@ -1,0 +1,98 @@
+@media (max-width: 1199px) {
+    .clients-feedback {
+        &.modal {
+            min-height: auto;
+            margin-top: 50px;
+        }
+        .modal-title-inpust {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .modal-title-inpust textarea {
+            grid-column: 1/4;
+        }
+        .btn {
+            width: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .page-inner-contacts {
+        padding-bottom: 64px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-inner-contacts {
+        padding-bottom: 60px;
+    }
+    .clients-map-inner.mod {
+        height: 480px;
+    }
+    .clients-slider {
+        margin-top: 30px;
+    }
+    .clients-feedback .modal-title-inpust {
+        grid-template-columns: 1fr;
+    }
+    .clients-feedback .modal-title-inpust textarea {
+        grid-column: 1/2;
+    }
+    .clients-feedback .btn {
+        max-width: 100%;
+        width: 100%;
+    }
+    .clients-slider {
+         .swiper-pagination{
+            bottom: 0;
+        }
+        .swiper-pagination-bullet {
+            display: block;
+            width: 20px;
+            min-height: auto;
+            min-height: 20px;
+            background: 0 0;
+            transition: 0.25s;
+            border-radius: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        padding-bottom: 43px;
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
+        }
+        .swiper-pagination-bullet:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            margin: 0;
+            background: #818491;
+            -webkit-transition: 0.25s;
+            -o-transition: 0.25s;
+            transition: 0.25s;
+        }
+        .swiper-pagination-bullet-active:after {
+            width: 40px;
+            background: #0e0e9c;
+        }
+        .swiper-pagination-bullet-active {
+            width: 40px;
+        }
+    }
+    .clients-feedback.modal{
+        margin-top: 30px;
+        padding: 35px 15px 35px;
+    }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 1200px) {
+}
