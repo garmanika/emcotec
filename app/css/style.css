@@ -2447,6 +2447,12 @@ button.header-top-tel-btn-search.open-search:hover {
   padding: 92px 0 100px;
   background: #fff
 }
+.quiz.hide {
+  padding: 55px 0 60px
+}
+.quiz.hide .quiz-contol {
+  margin-top: 0
+}
 .quiz .subtitle,
 .quiz .title {
   margin-bottom: 32px
@@ -2458,6 +2464,12 @@ button.header-top-tel-btn-search.open-search:hover {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between
+}
+.quiz-panel.active {
+  display: block
+}
+.quiz-panel {
+  display: none
 }
 .quiz .quiz-inner.mod {
   grid-template-columns: repeat(2,1fr)
@@ -2484,9 +2496,6 @@ button.header-top-tel-btn-search.open-search:hover {
   display: flex;
   gap: 15px
 }
-.quiz-contol-btns .btn {
-  height: 48px
-}
 .quiz-contol-cancel {
   color: #333;
   background: #fff;
@@ -2495,18 +2504,36 @@ button.header-top-tel-btn-search.open-search:hover {
 .quiz-contol-cancel:hover {
   color: #fff
 }
+.quiz-contol-apply {
+  border: 1px solid transparent
+}
+.quiz-contol-apply.no-enable {
+  border-color: #e0e0e0;
+  color: #818491;
+  background: 0 0
+}
+.quiz-contol-apply.no-enable:hover {
+  background: #fff;
+  color: #333;
+  border-color: #333
+}
 .quiz-contol-text {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   font-family: Roboto,sans-serif;
   color: #212121;
-  margin-top: 58px;
-  margin-bottom: -20px
+  margin-top: 58px
 }
 .quiz-contol-next {
   max-width: 162px;
   width: 100%
+}
+.quiz-contol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px
 }
 .quiz-contol-hide {
   display: -webkit-box;
@@ -2528,9 +2555,17 @@ button.header-top-tel-btn-search.open-search:hover {
   background: #fff;
   border: 1px solid #0e0e9c
 }
+.quiz-contol-hide.on svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
 .quiz-contol-hide svg {
   width: 24px;
-  height: 24px
+  height: 24px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 .quiz-contol-hide:hover {
   background: #0e0e9c;
@@ -6472,6 +6507,9 @@ button.header-top-tel-btn-search.open-search:hover {
 }
 .clients-map-inner.contacts {
   height: 540px
+}
+.btn.no-show {
+  display: none
 }
 @media (max-width:991px) {
   .void-inner {
