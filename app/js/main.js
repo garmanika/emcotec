@@ -351,28 +351,44 @@ $(function () {
   });
 
   $(".catalog-items-box .control-more").on("click", function () {
-    $(this).closest(".catalog-items-box ").removeClass("filled");
+    $(this).closest(".catalog-items-box ").removeClass("crowded");
   });
 
   $(".catalog-section-mob-table .control-more").on("click", function () {
-    $(this).closest(".catalog-section-mob-table").removeClass("filled");
+    $(this).closest(".catalog-section-mob-table").removeClass("crowded");
   });
+  $(".quiz-promo-inner .btn").on("click", function () {
+    $(".quiz").toggle();
+    $(".quiz-promo").toggle();
+  })
 
   $(".catalog-items").each(function (indx, el) {
     if ($(".catalog-item", el).length > 4) {
-      $(this).closest(".catalog-items-box").addClass("filled");
+      $(this).closest(".catalog-items-box").addClass("crowded");
     } else {
-      $(this).closest(".catalog-items-box").removeClass("filled");
+      $(this).closest(".catalog-items-box").removeClass("crowded");
     }
   });
 
   $(".catalog-section-mob-table-items").each(function (indx, el) {
     if ($(".catalog-section-mob-table-item", el).length > 3) {
-      $(this).closest(".catalog-section-mob-table").addClass("filled");
+      $(this).closest(".catalog-section-mob-table").addClass("crowded");
     } else {
-      $(this).closest(".catalog-section-mob-table").removeClass("filled");
+      $(this).closest(".catalog-section-mob-table").removeClass("crowded");
     }
   });
+  $('.catalog-detail-product-control .about-short-titles-link').on('click', function(event) {
+    event.preventDefault();
+    let href = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 370,
+        easing: "linear"
+    });
+
+    return false;
+});
 
   checkTagsHeight();
   $(window).resize(checkTagsHeight);

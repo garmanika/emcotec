@@ -1,4 +1,7 @@
 @media (max-width: 1199px) {
+    .anchor{
+        top: -64px;
+      }
 }
 
 @media (max-width: 991px) {
@@ -17,6 +20,9 @@
 }
 
 @media (max-width: 767px) {
+    .anchor{
+        top: -48px;
+      }
     .void-inner{
         min-height: 100vh;
     }
